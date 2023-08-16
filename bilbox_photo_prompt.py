@@ -55,7 +55,7 @@ class BilboXPhotoPrompt:
             with open(file_path) as f:
                 self.json_data = json.load(f)
         except Exception as e:
-            print(f"An error occurred during BilboX's PromptHero Photo Promt initialization: {str(e)}")
+            print(f"An error occurred during BilboX's PromptGeek Photo Prompt initialization: {str(e)}")
 
         # "[STYLE OF PHOTO] photo of a [SUBJECT], [IMPORTANT FEATURE], [MORE DETAILS], [POSE OR ACTION],[FRAMING],
         #  [SETTING/BACKGROUND], [LIGHTING],[CAMERA ANGLE], [CAMERA PROPERTIES],in style of [PHOTOGRAPHER]"
