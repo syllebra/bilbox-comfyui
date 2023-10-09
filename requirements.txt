@@ -1,0 +1,4 @@
+colour-science>=0.4.3
+numpy>=1.19.0
+imageio>=2.31.0
+#scipy==1.4.1

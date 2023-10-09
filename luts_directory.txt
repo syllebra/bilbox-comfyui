@@ -1,0 +1,2 @@
+# Uncomment and modify next line to setup a custom luts path
+# d:/LUTs/cube

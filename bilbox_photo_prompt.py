@@ -103,12 +103,3 @@ class BilboXPhotoPrompt:
             print(f"subject_only: {subject}")
 
         return preview, subject
-
-
-NODE_CLASS_MAPPINGS = {
-    "BilboXPhotoPrompt": BilboXPhotoPrompt,
-}
-
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "BilboXPhotoPrompt": "BilboX's PromptGeek Photo Prompt",
-}

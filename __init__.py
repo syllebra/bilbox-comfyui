@@ -1,4 +1,17 @@
-from .bilbox_photo_prompt import NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
+from .bilbox_photo_prompt import BilboXPhotoPrompt
+from .bilbox_post_processing import BilboXLut, BilboXVignette
+
+NODE_CLASS_MAPPINGS = {
+    "BilboXPhotoPrompt": BilboXPhotoPrompt,
+    "BilboXVignette": BilboXVignette,
+    "BilboXLut": BilboXLut,
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "BilboXLut": "BilboX post-processing LUT",
+    "BilboXVignette": "BilboX post-processing vignette effect",
+    "BilboXPhotoPrompt": "BilboX PromptGeek Photo Prompt",
+}
 
 __all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
 
