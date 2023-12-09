@@ -302,3 +302,39 @@ textarea:read-only::selection {
     font-style: italic;
 
 }
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--comfy-input-bg);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgb(64 64 64 / 5%);
+    padding: 10px 0;
+}
+.menu > li > a {
+font: inherit;
+border: 0;
+padding: 10px 30px 10px 15px;
+display: flex;
+align-items: center;
+position: relative;
+text-decoration: unset;
+color: var(--border-color);
+font-weight: 500;
+transition: 0.5s linear;
+-webkit-transition: 0.5s linear;
+-moz-transition: 0.5s linear;
+-ms-transition: 0.5s linear;
+-o-transition: 0.5s linear;
+}
+.menu > li > a:hover {
+background:#161616;
+color: #97a9c4;
+}
+.menu > li > a > i {
+padding-right: 10px;
+}
+.menu > li.shutdown > a:hover {
+color: red;
+}
