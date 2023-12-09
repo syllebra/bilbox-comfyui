@@ -10,7 +10,7 @@ def read_luts_dicts(luts_path):
     paths = []
     for root, directories, files in os.walk(luts_path):
         for file in files:
-            if file.endswith('.cube'):
+            if file.lower().endswith('.cube'):
                 file_path = os.path.join(root, file)
                 rel_path = os.path.relpath(file_path, luts_path)
                 paths.append(rel_path)
