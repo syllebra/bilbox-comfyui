@@ -51,7 +51,7 @@ class BilboXPhotoPrompt:
         p = os.path.dirname(os.path.realpath(__file__))
 
         try:
-            file_path = os.path.join(p, '../../web/extensions/bilbox/PromptGeek/photo_data.json')
+            file_path = os.path.join(p, './web/PromptGeek/photo_data.json')
             with open(file_path) as f:
                 self.json_data = json.load(f)
         except Exception as e:
