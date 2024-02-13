@@ -31,17 +31,6 @@
     pointer-events: none;
 }
 
-.comfy-multiline-input span {
-    display: block;
-    position: absolute;
-    top: -30px;
-    left: 0px;
-    width: auto;
-    background-color: var(--comfy-input-bg);
-    border-radius: 8px;
-    border-color: var(--border-color);       
-}
-
 .tooltip {
     text-decoration: none;
     position: relative;

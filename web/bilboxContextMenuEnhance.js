@@ -182,8 +182,6 @@ app.registerExtension({
 			}
 		}
 
-		
-
 		installCss()
 		fetch('/extensions/bilbox-comfyui/PromptGeek/photo_data.json')
     		.then((response) => response.json())
@@ -307,9 +305,13 @@ app.registerExtension({
 
 	},
 	loadedGraphNode(node, app) {
+		if(node.type != ActivateNodeType)
+			return;		
 		customize_node(node);
 	},
 	nodeCreated(node, app) {
+		if(node.type != ActivateNodeType)
+			return;
 		function checkTextArea(event)
 		{
 			update_preview(node);
