@@ -1,4 +1,5 @@
 import { app } from "../../scripts/app.js";
+import { api } from "../../scripts/api.js"
 
 // Inverts the scrolling of context menus
 const ActivateNodeType = "BilboXPhotoPrompt"
