@@ -183,7 +183,7 @@ app.registerExtension({
 		}
 
 		installCss()
-		fetch('/extensions/bilbox-comfyui/PromptGeek/photo_data.json')
+		api.fetchApi('/extensions/bilbox-comfyui/PromptGeek/photo_data.json')
     		.then((response) => response.json())
     		.then((json) => window.bilbox_promptgeek_data = json);
 
