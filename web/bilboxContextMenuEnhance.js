@@ -198,6 +198,12 @@ app.registerExtension({
 			if( node.type != ActivateNodeType)
 				return lcg.call(this, node, pos, event, active_widget);
 
+			for (let widget of node.widgets) {
+					if (widget?.element?.nodeName === "INPUT") {
+						widget.element.classList.add("bilbox-input");
+					}
+			}
+
 			// Patch as it seems that in nodeCreated, node type is not set directly
 			customize_node(node);
 
@@ -322,6 +328,7 @@ app.registerExtension({
 		 	var w = node.widgets[i];
 		 	if(w.type == "customtext" && 'inputEl' in w)
 			{
+				
 				w.inputEl.addEventListener("input", checkTextArea.bind(node));
 			} 
 		}

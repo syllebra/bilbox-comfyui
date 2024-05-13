@@ -111,14 +111,14 @@ hr {
     color: var(--descrip-text);
 }
 
-textarea:read-only {
+.bilbox-textarea:read-only {
     border: 0;
     box-shadow: none;
     background-color: #303030 !important;
     color: var(--descrip-text) !important;
 }
 
-textarea:read-only::selection {
+.bilbox-textarea:read-only::selection {
     color: var(--drag-text);  
     background-color: var(--border-color);
 }
