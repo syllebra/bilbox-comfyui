@@ -1,4 +1,4 @@
-[data-tooltip]::before {
+#bx_modal_context_menu [data-tooltip]::before {
     /* needed - do not touch */
     content: attr(data-tooltip);
     position: absolute;
@@ -18,7 +18,7 @@
     margin-left: 90%;
 }
 
-[data-tooltip]:hover::before {
+#bx_modal_context_menu [data-tooltip]:hover::before {
     /* needed - do not touch */
     opacity: 1;
 
@@ -27,16 +27,16 @@
     margin-left: 100%;
 }
 
-[data-tooltip]:not([data-tooltip-persistent])::before {
+#bx_modal_context_menu [data-tooltip]:not([data-tooltip-persistent])::before {
     pointer-events: none;
 }
 
-.tooltip {
+#bx_modal_context_menu .tooltip {
     text-decoration: none;
     position: relative;
 }
 
-.tooltip span {
+#bx_modal_context_menu .tooltip span {
     display: none;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -46,30 +46,30 @@
     border-color: var(--border-color);    
 }
 
-.tooltip span img {
+#bx_modal_context_menu .tooltip span img {
     float: left;
     margin: 0px 8px 8px 0;
     max-width: 100%
 }
 
-.tooltip span a, .comfy-modal span a{
+#bx_modal_context_menu .tooltip span a, #bx_modal_context_menu.comfy-modal span a{
     color: var(--descrip-text);
     float:right;
     font-style: italic;
     font-size: smaller;
 }
 
-.comfy-modal span{
+#bx_modal_context_menu.comfy-modal span{
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
-.tooltip span a:hover, .comfy-modal span a:hover  {
+#bx_modal_context_menu .tooltip span a:hover, #bx_modal_context_menu.comfy-modal span a:hover  {
     color: var(--input-text);
 }
 
-.tooltip:hover span {
+#bx_modal_context_menu .tooltip:hover span {
     display: block;
     position: absolute;
     top: -300px;
@@ -85,7 +85,7 @@
     padding: 8px;
 }
 
-[data-title]::before {
+#bx_modal_context_menu [data-title]::before {
     /* needed - do not touch */
     content: attr(data-tooltip);
     position: absolute;
@@ -125,7 +125,7 @@ textarea:read-only::selection {
 
 /* Masonry on large screens */
 @media only screen and (min-width: 800px) {
-    .grid-layout {
+    #bx_modal_context_menu .grid-layout {
       display: grid;
       
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -138,7 +138,7 @@ textarea:read-only::selection {
   
   /* Masonry on medium-sized screens */
    @media only screen and (max-width: 799px) and (min-width: 400px) {
-    .grid-layout {
+    #bx_modal_context_menu .grid-layout {
       display: grid;
       grid-template-columns: masonry;
       grid-gap: 1px;
@@ -149,7 +149,7 @@ textarea:read-only::selection {
   }
   /* Masonry on small screens */
   @media only screen and (max-width: 399px) and (min-width: 0px) {
-    .grid-layout {
+    #bx_modal_context_menu .grid-layout {
       display: grid;
       grid-template-columns: masonry;
       grid-gap: 1px;
@@ -159,7 +159,7 @@ textarea:read-only::selection {
     }
   }
 
-.cards-container {
+#bx_modal_context_menu .cards-container {
     width: 100%;
     height: 100%;
     padding: 0px;
@@ -169,7 +169,7 @@ textarea:read-only::selection {
 	font-family: sans-serif;
 }
 
-.grid_group {
+#bx_modal_context_menu .grid_group {
     padding: 0px;
     margin: 0px;
     overflow: hidden;
@@ -181,7 +181,7 @@ textarea:read-only::selection {
     max-height: 400px;
   }
 
-.grid-art {
+#bx_modal_context_menu .grid-art {
     padding: 0px;
     margin: 0px;
     font-size: 14px;
@@ -206,7 +206,7 @@ textarea:read-only::selection {
     z-index: 10000;
 }
 
-.art__image{
+#bx_modal_context_menu .art__image{
     width: 100%;
     height: 100%;
     padding: 0px;
@@ -219,11 +219,11 @@ textarea:read-only::selection {
     height: 100%;
 }
   
-.grid-art:hover .art__image {
+#bx_modal_context_menu .grid-art:hover .art__image {
     transform: scale(1.1);
     transition: all 1s;
   }
-  .art__text-wrapper {
+  #bx_modal_context_menu .art__text-wrapper {
     border-radius: 5px;
     padding: 8px;
     color: white;
@@ -233,39 +233,39 @@ textarea:read-only::selection {
     bottom: 0px;
 }
 
-.art__title {
+#bx_modal_context_menu .art__title {
     transition: color 1s ease;
     margin-bottom: .5rem;
 }
 
-.art__post-date {
+#bx_modal_context_menu .art__post-date {
     font-size: 0.8rem;
     margin-bottom: .2rem;
     color: #CCC;
 }
 
-.art__details-wrapper {
+#bx_modal_context_menu .art__details-wrapper {
     max-height: 0;
     opacity: 0;
     transition: all 1s ease;
     transition-delay: 0.2s;
 }
 
-.grid-art:hover .art__details-wrapper {
+#bx_modal_context_menu .grid-art:hover .art__details-wrapper {
     max-height: 1000px;
     opacity: 1;
     transition-delay: 1s;
 }
       
-.grid-art:hover .art__text-wrapper {
+#bx_modal_context_menu .grid-art:hover .art__text-wrapper {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.grid-art:hover .art__title {
+#bx_modal_context_menu .grid-art:hover .art__title {
     color: rgb(255, 255, 150);
 }
 
-.art__link {
+#bx_modal_context_menu .art__link {
     top: 20px;
     left: 20px;
     bottom: 20px;
@@ -274,14 +274,14 @@ textarea:read-only::selection {
     position: absolute;
 }  
 
-.art__excerpt {
+#bx_modal_context_menu .art__excerpt {
     font-weight: lighter;
     justify-content: space-evenly;
     text-align: justify;
     text-justify: inter-cluster;
 }
 
-.bx_modal_title
+#bx_modal_context_menu .bx_modal_title
 {
     text-align: center;
     padding: 0px;
@@ -292,7 +292,7 @@ textarea:read-only::selection {
 
 }
 
-.menu {
+#bxRebootContextMenu .menu {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -301,7 +301,7 @@ textarea:read-only::selection {
     box-shadow: 0 10px 20px rgb(64 64 64 / 5%);
     padding: 10px 0;
 }
-.menu > li > a {
+#bxRebootContextMenu .menu > li > a {
 font: inherit;
 border: 0;
 padding: 10px 30px 10px 15px;
@@ -317,13 +317,13 @@ transition: 0.5s linear;
 -ms-transition: 0.5s linear;
 -o-transition: 0.5s linear;
 }
-.menu > li > a:hover {
+#bxRebootContextMenu .menu > li > a:hover {
 background:#161616;
 color: #97a9c4;
 }
-.menu > li > a > i {
+#bxRebootContextMenu .menu > li > a > i {
 padding-right: 10px;
 }
-.menu > li.shutdown > a:hover {
+#bxRebootContextMenu .menu > li.shutdown > a:hover {
 color: red;
 }
