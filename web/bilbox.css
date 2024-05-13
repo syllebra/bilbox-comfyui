@@ -105,12 +105,6 @@
     margin-left: 90%;
 }
 
-hr {
-    height: 0px;
-    margin: 20px 0px; width: 100%;
-    color: var(--descrip-text);
-}
-
 .bilbox-textarea:read-only {
     border: 0;
     box-shadow: none;
