@@ -199,7 +199,7 @@ app.registerExtension({
 				return lcg.call(this, node, pos, event, active_widget);
 
 			for (let widget of node.widgets) {
-					if (widget?.element?.nodeName === "INPUT") {
+					if (widget?.element?.nodeName === "TEXTAREA") {
 						widget.element.classList.add("bilbox-input");
 					}
 			}
