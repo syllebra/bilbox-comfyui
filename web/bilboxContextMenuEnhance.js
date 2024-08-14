@@ -317,8 +317,11 @@ app.registerExtension({
 		customize_node(node);
 	},
 	nodeCreated(node, app) {
-		if(node.type != ActivateNodeType)
+		// hotfix cause node.type is somehow has undefined value
+		if (node.widgets[0].name != 'modal_combos')
 			return;
+		// if(node.type != ActivateNodeType)
+			// return;
 		function checkTextArea(event)
 		{
 			update_preview(node);
