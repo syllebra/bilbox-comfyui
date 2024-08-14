@@ -42,7 +42,7 @@ function createCardElement(title, description, img_path, holder, callback)
 
 function set_preview_not_editable(node)
 {
-	if(node.type == ActivateNodeType)
+	if (node.widgets[0].name == 'modal_combos')
 	{
 		for(var w of node.widgets)
 		{
@@ -322,6 +322,9 @@ app.registerExtension({
 			return;
 		// if(node.type != ActivateNodeType)
 			// return;
+
+		customize_node(node); // init event listeners
+
 		function checkTextArea(event)
 		{
 			update_preview(node);
