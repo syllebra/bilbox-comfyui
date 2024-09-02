@@ -1,5 +1,4 @@
 import { app } from "../../scripts/app.js";
-import { api } from "../../scripts/api.js"
 
 // Inverts the scrolling of context menus
 const ActivateNodeType = "BilboXPhotoPrompt"
@@ -184,7 +183,7 @@ app.registerExtension({
 		}
 
 		installCss()
-		api.fetchApi('/extensions/bilbox-comfyui/PromptGeek/photo_data.json')
+		fetch('/extensions/bilbox-comfyui/PromptGeek/photo_data.json')
     		.then((response) => response.json())
     		.then((json) => window.bilbox_promptgeek_data = json);
 
