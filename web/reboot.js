@@ -11,7 +11,7 @@ app.registerExtension({
 
 		separator.style.margin = "20px 0";
 		separator.style.width = "100%";
-		menu.append(separator);
+		//menu.append(separator);
 
 		const rebootButton = document.createElement("button");
 		rebootButton.textContent = "Server...";
@@ -57,5 +57,21 @@ app.registerExtension({
 
 		rebootButton.style.background = "linear-gradient(90deg, #442222 0%, #222222 100%)";
 		//rebootButton.style.color = "black";
+
+
+		const setting = app.ui.settings.addSetting({
+			id: "BilboX.DistantShutdownMenu",
+			name: "Show distant server shutdown menu",
+			defaultValue: false,
+			type: "boolean",
+			onChange: async (v) => {
+				console.log("Value:",v, rebootButton);
+				rebootButton.style.display = v ? "block":"none";
+				if(!v)
+					document.getElementById("bxRebootContextMenu").style.display = "none";
+			}	
+		});
+
+
 	},
 });    
