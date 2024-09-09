@@ -1,5 +1,4 @@
 import { app } from "../../scripts/app.js";
-import { api } from "../../scripts/api.js"
 
 const photo_data = {
     "style": [
@@ -1274,29 +1273,6 @@ app.registerExtension({
 			head.appendChild(link);
 		}
 
-		function setup_tooltips(combo_name)
-		{
-			var cname = combo_name.replace("_"," ");
-			if(!(cname in window.bilbox_promptgeek_data))
-				return;
-			var data = bilbox_promptgeek_data[cname].reduce(
-				(obj, item) => Object.assign(obj, { [item["name"]]: item }), {});
-			const items = Array.from(document.querySelectorAll(".litemenu-entry"));
-			for (var e of items) {
-				var title = e.innerText;
-				if(title in data)
-				{
-					//e.setAttribute('data-tooltip', data[title]["description"]);
-					var img = relPath+'/PromptGeek/'+ data[title]["images"][0]
-					e.innerHTML += '<span><img src="'+img+'">'+
-						'<a href="https://www.youtube.com/@promptgeek">PromptGeek\'s Youtube</a><br>'+
-						'<a href="https://promptgeek.gumroad.com/l/photoreal">PromptGeek\'s "Photoreal" Book</a><br>'+
-						'<h3>'+ title+'</h3><p align="justify">'+data[title]["description"]+'</p></span>';
-					e.classList.add("tooltip");
-				}
-			}
-		}
-
 		function setup_selection_modal(combo_name, callback)
 		{
 			var container = null;
@@ -1348,12 +1324,7 @@ app.registerExtension({
 		}
 
 		installCss()
-		// api.fetchApi('/extensions/bilbox-comfyui/PromptGeek/photo_data.json')
-    	// 	.then((response) => response.json())
-    	// 	.then((json) => {
-		// 		console.log('json', json);
-		// 		return window.bilbox_promptgeek_data = json
-		// 	});
+
 		window.bilbox_promptgeek_data = photo_data
 
 		const lcg = LGraphCanvas.prototype.processNodeWidgets;
@@ -1439,8 +1410,6 @@ app.registerExtension({
 								widget: w,
 							},
 							ref_window);
-
-						setup_tooltips(w.name);
 					}
 				}
 			}
