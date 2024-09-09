@@ -1273,6 +1273,29 @@ app.registerExtension({
 			head.appendChild(link);
 		}
 
+		function setup_tooltips(combo_name)
+		{
+			var cname = combo_name.replace("_"," ");
+			if(!(cname in window.bilbox_promptgeek_data))
+				return;
+			var data = bilbox_promptgeek_data[cname].reduce(
+				(obj, item) => Object.assign(obj, { [item["name"]]: item }), {});
+			const items = Array.from(document.querySelectorAll(".submenu"));
+			for (var e of items) {
+				var title = e.innerText;
+				if(title in data)
+				{
+					//e.setAttribute('data-tooltip', data[title]["description"]);
+					var img = relPath+'/PromptGeek/'+ data[title]["images"][0]
+					e.innerHTML += '<span><img src="'+img+'">'+
+						'<a href="https://www.youtube.com/@promptgeek">PromptGeek\'s Youtube</a><br>'+
+						'<a href="https://promptgeek.gumroad.com/l/photoreal">PromptGeek\'s "Photoreal" Book</a><br>'+
+						'<h3>'+ title+'</h3><p align="justify">'+data[title]["description"]+'</p></span>';
+					e.classList.add("bx_tooltip");
+				}
+			}
+		}
+
 		function setup_selection_modal(combo_name, callback)
 		{
 			var container = null;
@@ -1410,6 +1433,7 @@ app.registerExtension({
 								widget: w,
 							},
 							ref_window);
+                        setup_tooltips(w.name);
 					}
 				}
 			}

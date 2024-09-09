@@ -31,12 +31,12 @@
     pointer-events: none;
 }
 
-#bx_modal_context_menu .tooltip {
+.bx_tooltip {
     text-decoration: none;
     position: relative;
 }
 
-#bx_modal_context_menu .tooltip span {
+.bx_tooltip span {
     display: none;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -46,13 +46,13 @@
     border-color: var(--border-color);    
 }
 
-#bx_modal_context_menu .tooltip span img {
+.bx_tooltip span img {
     float: left;
     margin: 0px 8px 8px 0;
     max-width: 100%
 }
 
-#bx_modal_context_menu .tooltip span a, #bx_modal_context_menu.comfy-modal span a{
+.bx_tooltip span a, #bx_modal_context_menu.comfy-modal span a{
     color: var(--descrip-text);
     float:right;
     font-style: italic;
@@ -65,11 +65,11 @@
     right: 10px;
 }
 
-#bx_modal_context_menu .tooltip span a:hover, #bx_modal_context_menu.comfy-modal span a:hover  {
+.bx_tooltip span a:hover, #bx_modal_context_menu.comfy-modal span a:hover  {
     color: var(--input-text);
 }
 
-#bx_modal_context_menu .tooltip:hover span {
+.bx_tooltip:hover span {
     display: block;
     position: absolute;
     top: -300px;
