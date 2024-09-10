@@ -64,6 +64,8 @@ An optinnal parameter is just used to debug and print informations about the lut
 * Arts: [@PromptGeek Youtube](https://www.youtube.com/@PromptGeek)
 
 ## Version History
+* 1.0.0
+    * Fixed various bugs and added to comfy registry
 
 * 0.3
     * Add post preocessing effects *LUT color correction* and *Vignette effect*
