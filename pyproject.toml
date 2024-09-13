@@ -1,7 +1,7 @@
 [project]
 name = "bilbox-comfyui"
 description = "Nodes: BilboX's PromptGeek Photo Prompt. This provides a convenient way to compose photorealistic prompts into ComfyUI. Post-Processing: adds various post processing effects. Bonus: Option to show a distant server shutdown menu."
-version = "1.0.0"
+version = "1.0.1"
 license = {file = "LICENSE"}
 dependencies = ["colour-science>=0.4.3", "numpy>=1.19.0", "imageio>=2.31.0", "opencv-python>=4.8.1.78"]
 

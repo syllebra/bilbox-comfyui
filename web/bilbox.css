@@ -286,7 +286,13 @@
 
 }
 
-#bxRebootContextMenu .menu {
+.bx-reboot-cm-new {
+    left: 50px;
+    bottom: 0px;
+    position:absolute;
+}
+
+.bx-reboot-context-menu .menu {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -295,7 +301,7 @@
     box-shadow: 0 10px 20px rgb(64 64 64 / 5%);
     padding: 10px 0;
 }
-#bxRebootContextMenu .menu > li > a {
+.bx-reboot-context-menu .menu > li > a {
 font: inherit;
 border: 0;
 padding: 10px 30px 10px 15px;
@@ -311,13 +317,13 @@ transition: 0.5s linear;
 -ms-transition: 0.5s linear;
 -o-transition: 0.5s linear;
 }
-#bxRebootContextMenu .menu > li > a:hover {
+.bx-reboot-context-menu .menu > li > a:hover {
 background:#161616;
 color: #97a9c4;
 }
-#bxRebootContextMenu .menu > li > a > i {
+.bx-reboot-context-menu .menu > li > a > i {
 padding-right: 10px;
 }
-#bxRebootContextMenu .menu > li.shutdown > a:hover {
+.bx-reboot-context-menu .menu > li.shutdown > a:hover {
 color: red;
 }
