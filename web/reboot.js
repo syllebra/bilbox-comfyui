@@ -64,21 +64,26 @@ app.registerExtension({
 		}
 		
 		// New interface
-		const side_tb = document.querySelector(".side-tool-bar-end");
-		const params_button = document.querySelector(".pi-cog");
-		if(side_tb && params_button)
-		{
-			const shutButton = params_button.parentElement.cloneNode(true);
-			shutButton.id = "bxRebootButtonNew";
-			let shuticon = shutButton.querySelector(".pi-cog");
-			shuticon.classList.remove("pi-cog");
-			shuticon.classList.add("pi-power-off");
-			side_tb.append(shutButton);
+		function add_button_new_interface() {
+			const side_tb = document.querySelector(".side-tool-bar-end");
+			const params_button = document.querySelector(".pi-cog");
+			if(side_tb && params_button)
+			{
+				const shutButton = params_button.parentElement.cloneNode(true);
+				shutButton.id = "bxRebootButtonNew";
+				let shuticon = shutButton.querySelector(".pi-cog");
+				shuticon.classList.remove("pi-cog");
+				shuticon.classList.add("pi-power-off");
+				side_tb.append(shutButton);
 
-			shutButton.onclick = () => { toggle_menu(document.getElementById("bxRebootContextMenuNew")) }
+				shutButton.onclick = () => { toggle_menu(document.getElementById("bxRebootContextMenuNew")) }
 
-			create_menu(document.querySelector(".side-tool-bar-container"), "bxRebootContextMenuNew", true)
+				create_menu(document.querySelector(".side-tool-bar-container"), "bxRebootContextMenuNew", true)
+			}
+			else
+				setTimeout(add_button_new_interface, 1000);
 		}
+		add_button_new_interface();
 
 		const setting = app.ui.settings.addSetting({
 			id: "BilboX.DistantShutdownMenu",
