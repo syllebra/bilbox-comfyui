@@ -23,18 +23,21 @@ from aiohttp import web
 @server.PromptServer.instance.routes.get("/bilbox/reboot")
 async def fetch_customnode_mappings(request):
     type = request.rel_url.query["mode"]
-    print("BilboX:",type)
+    print("BilboX:", type)
     json_obj = {"server_op": type}
- 
-    if(type == "shutdown"):
-        os.system("shutdown /s") # Shutdown
-    if(type == "reboot"):
-        os.system("shutdown /r") # Restart
-    if(type == "logout"):
-        os.system("shutdown /l") # logout
-    if(type == "lock"):
-        os.system("rundll32.exe user32.dll,LockWorkStation") # logout
-    return web.json_response(json_obj, content_type='application/json')
+
+    if type == "shutdown":
+        os.system("shutdown /s")  # Shutdown
+    if type == "hibernate":
+        os.system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0")  # hibernate
+    if type == "reboot":
+        os.system("shutdown /r")  # Restart
+    if type == "logout":
+        os.system("shutdown /l")  # logout
+    if type == "lock":
+        os.system("rundll32.exe user32.dll,LockWorkStation")  # logout
+    return web.json_response(json_obj, content_type="application/json")
+
 
 WEB_DIRECTORY = "./web"
 __all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS", "WEB_DIRECTORY"]
